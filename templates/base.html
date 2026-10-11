@@ -7,6 +7,17 @@
      <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
+
+    <nav class="navbar">
+    <a class="logo" href="{{ url_for('index') }}">My Flask Website</a>
+
+    <div class="nav-links">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('testing') }}">Testing</a>
+        <a href="{{ url_for('greet') }}">Greet</a>
+        <a href="{{ url_for('age') }}">age</a>
+    </div>
+</nav>
      {% block content %}{% endblock %}
 </body>
 </html>

@@ -1,0 +1,10 @@
+<form method="POST">
+    <label for="user_age">What's your age?</label>
+    <input type="text" id="user_name" name="user_age" required>
+    <button type="submit">enter</button>
+</form>
+
+{% if user_age %}
+    <h2>Hello, {{ user_age }}!</h2>
+{% endif %}
+{% endblock %}

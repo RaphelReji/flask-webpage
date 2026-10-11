@@ -23,6 +23,15 @@ def greet():
 
     return render_template("greet.html", user_name=user_name)
 
+@app.route("/age", methods=["GET", "POST"])
+def greet():
+    user_age = ""
+
+    if request.method == "POST":
+        user_age = request.form.get("user_age", "").strip()
+
+    return render_template("greet.html", user_name=user_age)
+
 if __name__ == "__main__":
     app.run(debug=True)
 
