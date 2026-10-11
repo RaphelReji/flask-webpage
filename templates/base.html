@@ -8,16 +8,12 @@
 </head>
 <body>
 
-    <nav class="navbar">
-    <a class="logo" href="{{ url_for('index') }}">My Flask Website</a>
+   <nav>
+        <a href="/">Home</a>
+        <a href="/testing">Test</a>
+        <a href="/greet">Greet</a>
+    </nav>
 
-    <div class="nav-links">
-        <a href="{{ url_for('index') }}">Home</a>
-        <a href="{{ url_for('testing') }}">Testing</a>
-        <a href="{{ url_for('greet') }}">Greet</a>
-        <a href="{{ url_for('age') }}">age</a>
-    </div>
-</nav>
      {% block content %}{% endblock %}
 </body>
 </html>
