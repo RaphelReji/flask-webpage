@@ -1,0 +1,16 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Personalized Greeting</h1>
+
+<form method="POST">
+    <label for="user_name">What's your name?</label>
+    <input type="text" id="user_name" name="user_name" required>
+    <button type="submit">Say Hello</button>
+</form>
+
+{% if user_name %}
+    <h2>Hello, {{ user_name }}!</h2>
+{% endif %}
+{% endblock %}
